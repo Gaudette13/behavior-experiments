@@ -464,7 +464,7 @@ class data():
         os.system(f'rclone mkdir BeiqueLabData1:"Behaviour Data/SebG/{self.mouse_number}"')
         os.system(f'rclone mkdir BeiqueLabData1:"Behaviour Data/SebG/{self.mouse_number}/{self.date_experiment}"')
         os.system(f'rclone copy /home/pi/Desktop/yesterday_data/{self.filename}'
-                  f' BeiqueLabData1:"BeiqueLabData1/Documents/Behaviour Data/SebG/{self.mouse_number}/{self.date_experiment}"')
+                  f' BeiqueLabData1:"Behaviour Data/SebG/{self.mouse_number}/{self.date_experiment}"')
 
 class Stepper():
     def __init__(self, n_trials, enablePIN, directionPIN, stepPIN, emptyPIN, side):
