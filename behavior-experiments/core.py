@@ -461,8 +461,8 @@ class data():
                   f'behavior-experiments/{self.filename} '
                   f'/home/pi/Desktop/yesterday_data')
         # Create remote folder for today's data and copy file into that folder
-        os.system(f'rclone mkdir BeiqueLabData1:"BeiqueLabData1/Documents/Behaviour Data/SebG/{self.mouse_number}"')
-        os.system(f'rclone mkdir BeiqueLabData1:"BeiqueLabData1/Documents/Behaviour Data/SebG/{self.mouse_number}/{self.date_experiment}"')
+        os.system(f'rclone mkdir BeiqueLabData1:"Behaviour Data/SebG/{self.mouse_number}"')
+        os.system(f'rclone mkdir BeiqueLabData1:"Behaviour Data/SebG/{self.mouse_number}/{self.date_experiment}"')
         os.system(f'rclone copy /home/pi/Desktop/yesterday_data/{self.filename}'
                   f' BeiqueLabData1:"BeiqueLabData1/Documents/Behaviour Data/SebG/{self.mouse_number}/{self.date_experiment}"')
 
@@ -921,7 +921,7 @@ def get_previous_data(mouse_number: str, protocol_name: str, countdown=True):
     # Paths for rclone config file, data repo (on rclone) and a local directory
     # to temporarily store the fetched data.
     rclone_cfg_path = '/home/pi/.config/rclone/rclone.conf'
-    data_path = 'BeiqueLabData1:BeiqueLabData1/Documents/Behaviour Data/SebG/'
+    data_path = 'BeiqueLabData1:Behaviour Data/SebG/'
     temp_data_path = '/home/pi/Desktop/temp_rclone/'
 
     # Empty the temporary data folder
